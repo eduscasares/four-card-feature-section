@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --primary-blue: hsl(212, 86%, 64%);
+    --dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --light-grey: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+p {
+    font-size: 13px;
+    color: var(--grayish-blue);
+}
+
+h1 {
+    color: var(--dark-blue);
+}
+h1 span {
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 17px;
+    color: var(--dark-blue);
+    margin: 0;
+}
+
+.heading {
+    max-width: 32%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.cardGrid {
+    display: flex;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.column {
+    width: 100%;
+    min-width: 315px;
+}
+
+.column.left .card{
+    border-top: 4px solid var(--primary-cyan);
+}
+
+.column.center .card:first-child{
+    border-top: 4px solid var(--primary-red);
+    margin-bottom: 40px;
+}
+
+.column.center .card{
+    border-top: 4px solid var(--primary-orange);
+}
+
+.column.right .card{
+    border-top: 4px solid var(--primary-blue);
+}
+
+.card {
+    position: relative;
+    flex: 30%;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 45px -25px hsla(234, 12%, 34%, 40%);
+}
+
+.card .featuredImage { 
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 525px) {
+    .heading { max-width: 100%; padding: 0 30px; }
+    .heading h1 { font-size: 24px; }
+    .cardGrid { flex-direction: column; }
+    .card { padding: 20px 30px; }
+}
